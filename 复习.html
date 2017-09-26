@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="tab">
+    <div id="box">hdsf</div>
+    <div id="second"></div>
+</div>
+<script type="text/javascript">
+   /* var obj={name:"zhufeng"};
+    console.log(obj);
+    var obj={age:8};
+    console.log(obj);
+    obj["age"]=10;
+    console.log(obj);*/
+   /*var ary=[10,1,20,30,10,40,66,30,66,56];*/
+   //indexOf:检测数组中成员是否存在 不存在返回-1
+    //var ary1=[];
+    //for(var i=0;i<ary.length;i++){
+      //  var cur=ary[i];
+        //if(ary1.indexOf(cur)===-1){
+          //  ary1.push(cur);
+        //}
+    //}
+    //console.log(ary);
+    //console.log(ary1);
+
+    //在原有数组上进行去重
+    //利用了对象的属性名如果是重要的 那么后面的值会把前面的覆盖掉
+    /*var obj={};
+    for(var i=0;i<ary.length;i++){
+        var cur=ary[i];
+        if(obj[cur]==cur){
+        }
+    }*/
+    var ser=document.getElementById("second");
+    function getBorther(cur) {
+        var sum=cur.previousSibling;
+        while (sum){
+            if(sum.nodeType===1){
+                return sum;
+            }
+            sum=sum.previousSibling;
+        }
+    }
+
+   console.log(getBorther(ser));
+</script>
+</body>
+</html>
